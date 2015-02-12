@@ -1,0 +1,1 @@
+-input "@source $(DVT_HOME)/libs/dvt_debug_tcl/dvt_debug.tcl"

@@ -1,0 +1,8 @@
+-uvm
+
++incdir+${UAGT_HOME}/sv
++incdir+sv
++incdir+examples/ms/rtl
++incdir+examples/ms/sv
++incdir+examples/ms/tests
+examples/ms/sv/amiq_dcr_ex_ms_top.sv

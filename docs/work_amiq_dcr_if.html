@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>amiq_dcr
+API Specification</title>
+
+	<meta name="author" content="cristian.slav">
+	<meta name="description" content="amiq_dcr API Specification">
+	<meta name="generator" content="Specador. Copyright (C) 2005-2015 AMIQ EDA ">
+	<meta name="keywords" content="SystemVerilog, HTML Documentation, Specador, AMIQ EDA, amiq_dcr API Specification">
+
+	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="css/content.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container-fluid">
+
+<!-- ========= Title ======= -->
+<h2>interface     amiq_dcr_if
+</h2>
+
+
+<!-- ========= Top Buttons ======= -->
+		<br>
+		<div class="btn-group">
+				
+	
+	<button data-scroll=#input_ports type="button" class="btn btn-default">Input Ports <span class="badge">1</span></button>
+	
+	
+	
+	
+	
+	
+	
+	<button data-scroll=#variables type="button" class="btn btn-default">Variables <span class="badge">18</span></button>
+	
+	<button data-scroll=#concurrent_assertions type="button" class="btn btn-default">Concurrent Assertions <span class="badge">23</span></button>
+	<button data-scroll=#procedural_assertions type="button" class="btn btn-default">Procedural Assertions <span class="badge">23</span></button>
+
+		</div>
+		<br><br>
+
+<!-- ========= Description ======= -->
+	<pre class="comment">DCR bus interface</pre>
+
+<!-- ========= Parameters ======= -->
+
+<!-- ========= Input Ports ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#input_ports">
+			<h4 class="panel-title">
+					Input Ports <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="input_ports" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="input_port_clk"></a>
+						<span class="signature">
+
+	logic
+<b>		clk
+</b>
+
+
+						</span>
+
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Inout Ports ======= -->
+
+<!-- ========= Output Ports ======= -->
+
+<!-- ========= Interface Ports ======= -->
+
+<!-- ========= Modports ======= -->
+
+<!-- ========= Clocking Blocks ======= -->
+
+<!-- ========= Variables ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#variables">
+			<h4 class="panel-title">
+					Variables <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="variables" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="variable_a_bus"></a>
+						<span class="signature">
+
+	logic[32-1:0]
+ <b>		a_bus
+</b>
+
+
+						</span>
+	<pre class="comment">DCR address bus</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_ack"></a>
+						<span class="signature">
+
+	logic
+ <b>		ack
+</b>
+
+
+						</span>
+	<pre class="comment">DCR transfer acknowledge signal</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_d_bus_in"></a>
+						<span class="signature">
+
+	logic[32-1:0]
+ <b>		d_bus_in
+</b>
+
+
+						</span>
+	<pre class="comment">DCR data bus used for read transfers</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_d_bus_out"></a>
+						<span class="signature">
+
+	logic[32-1:0]
+ <b>		d_bus_out
+</b>
+
+
+						</span>
+	<pre class="comment">DCR data bus used for write transfers</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_has_checks"></a>
+						<span class="signature">
+
+	bit
+ <b>		has_checks
+</b>
+
+
+						</span>
+	<pre class="comment">Switch global checking on (1) or off (0)</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_has_protocol_checks"></a>
+						<span class="signature">
+
+	bit
+ <b>		has_protocol_checks
+</b>
+
+
+						</span>
+	<pre class="comment">Switch protocol checking on (1) or off (0)</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_has_rst_checks"></a>
+						<span class="signature">
+
+	bit
+ <b>		has_rst_checks
+</b>
+
+
+						</span>
+	<pre class="comment">Switch reset checking on (1) or off (0)</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_has_x_z_checks"></a>
+						<span class="signature">
+
+	bit
+ <b>		has_x_z_checks
+</b>
+
+
+						</span>
+	<pre class="comment">Switch x/z checking on (1) or off (0)</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_master_id"></a>
+						<span class="signature">
+
+	logic[4-1:0]
+ <b>		master_id
+</b>
+
+
+						</span>
+	<pre class="comment">DCR master ID indicator signal</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_prev_read"></a>
+						<span class="signature">
+
+	bit
+ <b>		prev_read
+</b>
+
+
+						</span>
+	<pre class="comment">Previous read</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_prev_write"></a>
+						<span class="signature">
+
+	bit
+ <b>		prev_write
+</b>
+
+
+						</span>
+	<pre class="comment">Previous write</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_privileged"></a>
+						<span class="signature">
+
+	logic
+ <b>		privileged
+</b>
+
+
+						</span>
+	<pre class="comment">DCR privileged operation signal</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_read"></a>
+						<span class="signature">
+
+	logic
+ <b>		read
+</b>
+
+
+						</span>
+	<pre class="comment">DCR read command signal</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_reset_n"></a>
+						<span class="signature">
+
+	logic
+ <b>		reset_n
+</b>
+
+
+						</span>
+	<pre class="comment">DCR reset signal</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_timeout_counter"></a>
+						<span class="signature">
+
+	integer
+ <b>		timeout_counter
+</b>
+
+
+						</span>
+	<pre class="comment">Timeout counter</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_timeout_threshold"></a>
+						<span class="signature">
+
+	integer
+ <b>		timeout_threshold
+</b>
+
+
+						</span>
+	<pre class="comment">Threshold for timeout</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_timeout_wait"></a>
+						<span class="signature">
+
+	logic
+ <b>		timeout_wait
+</b>
+
+
+						</span>
+	<pre class="comment">DCR timeout counter inhibitor signal</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_write"></a>
+						<span class="signature">
+
+	logic
+ <b>		write
+</b>
+
+
+						</span>
+	<pre class="comment">DCR write command signal</pre>
+
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Concurrent Assertions ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#concurrent_assertions">
+			<h4 class="panel-title">
+					Concurrent Assertions <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="concurrent_assertions" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_ABUS_CNST_ON_CMD_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ABUS_CNST_ON_CMD_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_a_bus_cnst_on_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_ABUS_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ABUS_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_a_bus_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_ACK_ASSERTION_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ACK_ASSERTION_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_assertion_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_ACK_DEASSERTION_WHILE_CMD_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ACK_DEASSERTION_WHILE_CMD_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_deassertion_while_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_ACK_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ACK_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_CMD_FALL_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_CMD_FALL_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_cmd_fall_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_CMD_WHILE_ACK_ASSERTED_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_CMD_WHILE_ACK_ASSERTED_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_cmd_while_ack_asserted_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_COMMAND_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_COMMAND_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_command_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_DBUS_RD_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_RD_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_in_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_DBUS_WT_CNST_ON_READ_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_WT_CNST_ON_READ_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_out_cnst_on_read_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_DBUS_WT_CNST_ON_WRITE_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_WT_CNST_ON_WRITE_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_out_cnst_on_write_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_DBUS_WT_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_WT_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_out_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_D_BUS_IN_CNST_ON_READ_ACK_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_D_BUS_IN_CNST_ON_READ_ACK_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_in_cnst_on_read_ack_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_MASTERID_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_MASTERID_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_master_id_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_MASTER_ID_CNST_ON_CMD_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_MASTER_ID_CNST_ON_CMD_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_master_id_sig_cnst_on_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_PRIVILEDGED_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_PRIVILEDGED_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_privileged_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_PRIV_CNST_ON_CMD_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_PRIV_CNST_ON_CMD_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_priv_sig_cnst_on_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_READ_DEASSERTED_AT_RESET_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_READ_DEASSERTED_AT_RESET_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_read_deasserted_at_reset_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_READ_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_READ_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_read_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_TIMEOUTWAIT_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_TIMEOUTWAIT_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_timeout_wait_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_WRITE_DEASSERTED_AT_RESET_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_WRITE_DEASSERTED_AT_RESET_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_write_deasserted_at_reset_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_WRITE_VALID_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_WRITE_VALID_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_write_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="concurrent_assertion_AMIQ_DCR_ack_DEASSERTED_AT_RESET_ERR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ack_DEASSERTED_AT_RESET_ERR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_deasserted_at_reset_p
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Procedural Assertions ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#procedural_assertions">
+			<h4 class="panel-title">
+					Procedural Assertions <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="procedural_assertions" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_ABUS_CNST_ON_CMD_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ABUS_CNST_ON_CMD_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_a_bus_cnst_on_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_ABUS_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ABUS_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_a_bus_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_ACK_ASSERTION_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ACK_ASSERTION_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_assertion_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_ACK_DEASSERTION_WHILE_CMD_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ACK_DEASSERTION_WHILE_CMD_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_deassertion_while_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_ACK_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ACK_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_CMD_FALL_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_CMD_FALL_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_cmd_fall_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_CMD_WHILE_ACK_ASSERTED_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_CMD_WHILE_ACK_ASSERTED_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_cmd_while_ack_asserted_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_COMMAND_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_COMMAND_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_command_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_DBUS_RD_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_RD_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_in_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_DBUS_WT_CNST_ON_READ_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_WT_CNST_ON_READ_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_out_cnst_on_read_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_DBUS_WT_CNST_ON_WRITE_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_WT_CNST_ON_WRITE_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_out_cnst_on_write_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_DBUS_WT_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_DBUS_WT_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_out_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_D_BUS_IN_CNST_ON_READ_ACK_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_D_BUS_IN_CNST_ON_READ_ACK_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_d_bus_in_cnst_on_read_ack_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_MASTERID_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_MASTERID_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_master_id_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_MASTER_ID_CNST_ON_CMD_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_MASTER_ID_CNST_ON_CMD_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_master_id_sig_cnst_on_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_PRIVILEDGED_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_PRIVILEDGED_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_privileged_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_PRIV_CNST_ON_CMD_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_PRIV_CNST_ON_CMD_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_priv_sig_cnst_on_cmd_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_READ_DEASSERTED_AT_RESET_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_READ_DEASSERTED_AT_RESET_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_read_deasserted_at_reset_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_READ_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_READ_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_read_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_TIMEOUTWAIT_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_TIMEOUTWAIT_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_timeout_wait_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_WRITE_DEASSERTED_AT_RESET_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_WRITE_DEASSERTED_AT_RESET_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_write_deasserted_at_reset_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_WRITE_VALID_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_WRITE_VALID_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_write_valid_p
+					</li>
+					<li class="list-group-item">
+						<a name="procedural_assertion_AMIQ_DCR_ack_DEASSERTED_AT_RESET_CVR"></a>
+						<span class="signature">
+
+	<b>amiq_dcr_if.AMIQ_DCR_ack_DEASSERTED_AT_RESET_CVR</b>
+
+
+						</span>
+
+							amiq_dcr_ack_deasserted_at_reset_p
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Generated From ======= -->
+		<hr>Generated from: <a href="../sv/amiq_dcr_if.sv">amiq_dcr_if.sv</a>
+
+
+	</div>
+
+	<div class="footer">
+		<hr><p class="text-center">Generated by <b>cristian.slav</b> on Thu Feb 12 14:56:42 EET 2015 using <a href="http://www.dvteclipse.com/" target="_new">Specador<sup>TM</sup></a> Version 3.5.36.e4</p>
+    </div>
+
+	<script src="lib/jquery/js/jquery.js"></script>
+	<script src="lib/jquery/js/jquery.scrollUp.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<script src="js/content.js"></script>
+	<script src="js/custom.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>amiq_dcr
+API Specification</title>
+
+	<meta name="author" content="cristian.slav">
+	<meta name="description" content="amiq_dcr API Specification">
+	<meta name="generator" content="Specador. Copyright (C) 2005-2015 AMIQ EDA ">
+	<meta name="keywords" content="SystemVerilog, HTML Documentation, Specador, AMIQ EDA, amiq_dcr API Specification">
+
+	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="css/content.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container-fluid">
+<!-- ========= Title ======= -->
+<h2>class      		<a href="summary-amiq_dcr_pkg.html">amiq_dcr_pkg</a>
+:: amiq_dcr_coverage
+</h2>
+
+
+<!-- ========= Top Buttons ======= -->
+		<br>
+		<div class="btn-group">
+				
+	<button data-scroll=#constructor type="button" class="btn btn-default">Constructor <span class="badge">1</span></button>
+	<button data-scroll=#typedefs type="button" class="btn btn-default">Typedefs <span class="badge">1</span></button>
+	
+	
+	<button data-scroll=#variables type="button" class="btn btn-default">Variables <span class="badge">2</span></button>
+	
+	<button data-scroll=#functions type="button" class="btn btn-default">Functions <span class="badge">6</span></button>
+	
+
+	<button data-scroll=#inheritance_diagram type="button" class="btn btn-default">Inheritance Diagram</button>
+	<button data-scroll=#collaboration_diagram type="button" class="btn btn-default">Collaboration Diagram</button>
+	<button data-scroll=#direct_associations_diagram type="button" class="btn btn-default">Direct Associations Diagram</button>
+
+		</div>
+		<br><br>
+
+<!-- ========= Inheritance Tree ======= -->
+
+<!-- ========= Description ======= -->
+	<pre class="comment">DCR coverage collector</pre>
+
+<!-- ========= Parameters ======= -->
+
+<!-- ========= Constructor ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#constructor">
+			<h4 class="panel-title">
+					Constructor <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="constructor" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="constructor_new"></a>
+						<span class="signature">
+
+	 function 	
+
+	<b>		new
+</b>(	string
+name = "",
+	uvm_component
+parent)
+
+
+						</span>
+	<pre class="comment">Constructor<br><br><b>Arguments:</b><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>name</b> - name of the component instance<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>parent</b> - parent of the component instance<br></pre>
+
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Typedefs ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#typedefs">
+			<h4 class="panel-title">
+					Typedefs <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="typedefs" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="typedef_type_id"></a>
+						<span class="signature">
+
+	 <b>		type_id
+</b>
+
+		-> uvm_component_registry#(amiq_dcr_coverage, "amiq_dcr_coverage")
+	
+
+
+						</span>
+
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Structs ======= -->
+
+<!-- ========= Enums ======= -->
+
+<!-- ========= Variables ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#variables">
+			<h4 class="panel-title">
+					Variables <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="variables" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="variable_casted_agent_config"></a>
+						<span class="signature">
+
+	<a href="amiq_dcr_pkg-amiq_dcr_agent_config.html">amiq_dcr_agent_config</a>
+ <b>		casted_agent_config
+</b>
+
+
+						</span>
+	<pre class="comment">Casted agent configuration</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="variable_type_name"></a>
+						<span class="signature">
+
+const static 	string
+ <b>		type_name
+</b>
+
+
+						</span>
+
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Constraints ======= -->
+
+<!-- ========= Functions ======= -->
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#functions">
+			<h4 class="panel-title">
+					Functions <span class="glyphicon glyphicon-chevron-down"></span>
+			</h4>
+		</div>
+					<ul id="functions" class="list-group panel-collapse collapse in">
+					<li class="list-group-item">
+						<a name="function_get_object_type"></a>
+						<span class="signature">
+
+	virtual  function 	uvm_object_wrapper
+
+	<b>		get_object_type
+</b>()
+
+
+						</span>
+
+					</li>
+					<li class="list-group-item">
+						<a name="function_get_type"></a>
+						<span class="signature">
+
+	static  function 	<a href="amiq_dcr_pkg-amiq_dcr_coverage.html#typedef_type_id">type_id</a>
+
+	<b>		get_type
+</b>()
+
+
+						</span>
+
+					</li>
+					<li class="list-group-item">
+						<a name="function_get_type_name"></a>
+						<span class="signature">
+
+	virtual  function 	string
+
+	<b>		get_type_name
+</b>()
+
+
+						</span>
+
+					</li>
+					<li class="list-group-item">
+						<a name="function_handle_reset"></a>
+						<span class="signature">
+
+	virtual  function 	void
+
+	<b>		handle_reset
+</b>()
+
+
+						</span>
+	<pre class="comment">Function for handling reset</pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="function_start_of_simulation_phase"></a>
+						<span class="signature">
+
+	virtual  function 	void
+
+	<b>		start_of_simulation_phase
+</b>(	uvm_phase
+phase)
+
+
+						</span>
+	<pre class="comment">UVM start of simulation phase<br><br><b>Arguments:</b><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>phase</b> - current phase<br></pre>
+
+					</li>
+					<li class="list-group-item">
+						<a name="function_write_item_from_mon"></a>
+						<span class="signature">
+
+	virtual  function 	void
+
+	<b>		write_item_from_mon
+</b>(	<a href="amiq_dcr_pkg-amiq_dcr_mon_transfer.html">amiq_dcr_mon_transfer</a>
+transfer)
+
+
+						</span>
+	<pre class="comment">Implementation of the port receiving item from the monitor<br><br><b>Arguments:</b><br>&nbsp;&nbsp;&nbsp;&nbsp;<b>item</b> - received item from the monitor<br></pre>
+
+					</li>
+			</ul>
+
+	</div>
+
+<!-- ========= Tasks ======= -->
+
+<!-- ========= Diagrams ======= -->
+
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#inheritance_diagram">
+			<h4 class="panel-title">
+					Inheritance Diagram <span class="glyphicon glyphicon-chevron-right"></span>
+			</h4>
+		</div>
+				<ul id="inheritance_diagram" class="list-group panel-collapse collapse">
+			<img src="amiq_dcr_pkg-amiq_dcr_coverage_inheritance.png" border="0" usemap="#_inheritance_diagram" />
+			<map name="_inheritance_diagram">
+<area shape="rect" id="node1" href="amiq_dcr_pkg-amiq_dcr_coverage.html"  alt="" coords="1747,5,1933,35">
+<area shape="rect" id="node2"  alt="" coords="878,5,1370,35">
+<area shape="poly" id="edge1"  alt="" coords="1747,23,1384,23,1384,17,1747,17">
+<area shape="rect" id="node3"  alt="" coords="651,5,797,35">
+<area shape="poly" id="edge2"  alt="" coords="878,23,811,23,811,17,878,17">
+<area shape="rect" id="node4"  alt="" coords="385,5,570,35">
+<area shape="poly" id="edge3"  alt="" coords="650,23,584,23,584,17,650,17">
+<area shape="rect" id="node5"  alt="" coords="185,5,303,35">
+<area shape="poly" id="edge4"  alt="" coords="384,23,317,23,317,17,384,17">
+<area shape="rect" id="node6"  alt="" coords="5,5,104,35">
+<area shape="poly" id="edge5"  alt="" coords="185,23,118,23,118,17,185,17"></map>
+		</ul>
+
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#collaboration_diagram">
+			<h4 class="panel-title">
+					Collaboration Diagram <span class="glyphicon glyphicon-chevron-right"></span>
+			</h4>
+		</div>
+				<ul id="collaboration_diagram" class="list-group panel-collapse collapse">
+			<img src="amiq_dcr_pkg-amiq_dcr_coverage_collaboration.png" border="0" usemap="#_collaboration_diagram" />
+			<map name="_collaboration_diagram">
+<area shape="rect" id="node1" href="amiq_dcr_pkg-amiq_dcr_coverage.html"  alt="" coords="1845,1126,2030,1157">
+<area shape="rect" id="node2"  alt="" coords="1871,1033,2363,1063">
+<area shape="poly" id="edge1"  alt="" coords="1963,1124,2077,1066,2080,1071,1965,1129">
+<area shape="rect" id="node7" href="amiq_dcr_pkg-amiq_dcr_agent_config.html"  alt="" coords="1596,1033,1820,1063">
+<area shape="poly" id="edge19"  alt="" coords="1903,1129,1753,1070,1755,1065,1904,1124">
+<area shape="rect" id="node3"  alt="" coords="1773,846,1920,877">
+<area shape="poly" id="edge2"  alt="" coords="2121,1033,2126,1014,2123,996,2109,975,2094,963,2051,941,1977,907,1907,883,1909,878,1979,902,2053,936,2097,958,2113,971,2128,994,2131,1015,2126,1034">
+<area shape="rect" id="node8"  alt="" coords="1645,939,2041,970">
+<area shape="poly" id="edge20"  alt="" coords="1903,1036,1866,1025,1842,1010,1835,997,1834,983,1840,983,1841,996,1846,1006,1868,1020,1904,1031">
+<area shape="rect" id="node26"  alt="" coords="2200,939,2616,970">
+<area shape="poly" id="edge52"  alt="" coords="2159,1031,2351,971,2353,976,2161,1036">
+<area shape="rect" id="node4"  alt="" coords="1709,379,1894,410">
+<area shape="poly" id="edge3"  alt="" coords="1920,854,2035,842,2086,832,2121,819,2148,799,2155,787,2157,769,2157,487,2151,470,2134,455,2107,442,2073,431,1991,415,1907,405,1908,400,1992,409,2074,426,2109,437,2137,450,2156,467,2163,486,2163,770,2160,788,2152,802,2124,824,2088,837,2036,847,1920,859">
+<area shape="rect" id="node9"  alt="" coords="1962,99,2099,130">
+<area shape="poly" id="edge21"  alt="" coords="1920,854,2013,847,2112,831,2155,820,2189,806,2212,789,2218,779,2220,769,2220,207,2218,189,2211,175,2186,151,2151,136,2113,126,2114,121,2153,131,2189,147,2215,172,2223,188,2225,206,2225,770,2223,781,2216,792,2192,810,2157,825,2113,837,2014,852,1920,860">
+<area shape="rect" id="node17"  alt="" coords="1793,753,1901,783">
+<area shape="poly" id="edge37"  alt="" coords="1919,846,1963,835,1979,827,1989,820,1994,810,1993,802,1988,795,1978,789,1949,780,1914,775,1915,770,1950,775,1981,785,1992,791,1998,800,1999,811,1993,823,1981,832,1964,840,1921,851">
+<area shape="poly" id="edge38"  alt="" coords="1773,860,1737,854,1707,845,1696,838,1689,829,1689,818,1695,806,1708,796,1728,788,1778,776,1779,781,1730,793,1711,801,1699,810,1694,820,1695,827,1700,834,1709,840,1738,849,1773,854">
+<area shape="poly" id="edge50"  alt="" coords="1842,847,1840,821,1841,796,1846,796,1845,821,1848,846">
+<area shape="poly" id="edge51"  alt="" coords="1920,867,1936,864,1941,862,1932,857,1935,853,1947,861,1938,869,1921,872">
+<area shape="rect" id="node5"  alt="" coords="1775,286,1894,317">
+<area shape="poly" id="edge4"  alt="" coords="1804,379,1823,328,1828,330,1809,381">
+<area shape="rect" id="node19"  alt="" coords="592,286,787,317">
+<area shape="poly" id="edge42"  alt="" coords="1708,388,800,314,800,309,1709,383">
+<area shape="rect" id="node6"  alt="" coords="2087,193,2185,223">
+<area shape="poly" id="edge5"  alt="" coords="1894,292,1969,281,2048,259,2078,245,2105,229,2108,233,2081,250,2050,264,1970,286,1894,298">
+<area shape="rect" id="node11"  alt="" coords="1597,193,1811,223">
+<area shape="poly" id="edge23"  alt="" coords="1775,302,1532,294,1419,282,1380,274,1358,263,1353,249,1364,237,1386,228,1417,221,1496,212,1583,208,1583,213,1496,218,1418,227,1387,233,1367,241,1358,250,1362,260,1382,269,1420,277,1533,288,1775,297">
+<area shape="poly" id="edge6"  alt="" coords="1678,1035,1655,1017,1650,1005,1654,993,1674,980,1705,970,1707,975,1676,984,1658,996,1655,1005,1659,1014,1681,1031">
+<area shape="poly" id="edge7"  alt="" coords="1841,940,1843,890,1848,890,1846,940">
+<area shape="poly" id="edge8"  alt="" coords="2034,129,2035,157,2031,193,2020,231,1998,263,1983,273,1961,281,1908,293,1907,287,1960,276,1981,268,1994,259,2015,228,2025,192,2029,157,2029,129">
+<area shape="rect" id="node10"  alt="" coords="1643,6,1810,37">
+<area shape="poly" id="edge22"  alt="" coords="1995,102,1885,64,1801,42,1802,37,1886,59,1997,97">
+<area shape="poly" id="edge24"  alt="" coords="1631,225,1613,232,1601,240,1596,249,1601,260,1625,274,1665,285,1762,295,1761,301,1664,290,1623,279,1597,263,1591,249,1597,236,1611,227,1630,220">
+<area shape="poly" id="edge25"  alt="" coords="1703,193,1721,49,1726,50,1708,193">
+<area shape="poly" id="edge26"  alt="" coords="1703,223,1702,242,1708,260,1732,280,1763,292,1761,297,1729,285,1703,263,1696,243,1698,223">
+<area shape="rect" id="node12"  alt="" coords="1541,99,1678,130">
+<area shape="poly" id="edge27"  alt="" coords="1651,196,1631,185,1615,170,1609,157,1606,144,1611,143,1614,155,1619,166,1635,181,1653,191">
+<area shape="rect" id="node14"  alt="" coords="1819,99,1938,130">
+<area shape="poly" id="edge30"  alt="" coords="1729,191,1803,152,1839,133,1842,138,1805,157,1731,196">
+<area shape="poly" id="edge32"  alt="" coords="1773,191,1879,165,1980,131,1981,137,1881,171,1774,196">
+<area shape="rect" id="node15"  alt="" coords="1319,99,1447,130">
+<area shape="poly" id="edge33"  alt="" coords="1630,196,1523,171,1427,137,1429,132,1525,165,1631,191">
+<area shape="poly" id="edge36"  alt="" coords="1777,220,1799,231,1819,246,1828,258,1833,272,1828,274,1823,261,1815,250,1797,235,1774,225">
+<area shape="rect" id="node13"  alt="" coords="1427,6,1565,37">
+<area shape="poly" id="edge28"  alt="" coords="1539,106,1515,95,1495,76,1490,64,1488,50,1494,50,1495,62,1500,73,1518,90,1542,101">
+<area shape="poly" id="edge29"  alt="" coords="1612,99,1622,79,1638,59,1669,39,1672,44,1642,63,1627,82,1617,101">
+<area shape="poly" id="edge31"  alt="" coords="1855,102,1760,45,1762,41,1858,98">
+<area shape="rect" id="node16"  alt="" coords="1191,6,1377,37">
+<area shape="poly" id="edge34"  alt="" coords="1317,102,1298,92,1283,76,1278,63,1276,50,1282,50,1283,62,1288,73,1302,87,1320,98">
+<area shape="poly" id="edge35"  alt="" coords="1382,99,1388,78,1403,59,1486,45,1630,29,1630,35,1486,50,1405,64,1393,81,1387,101">
+<area shape="poly" id="edge9"  alt="" coords="1901,758,1940,749,1977,733,1992,722,2004,709,2012,694,2015,676,2015,394,2012,376,2005,362,1980,338,1946,322,1907,313,1909,307,1947,317,1983,334,2010,358,2017,375,2020,393,2020,676,2017,695,2008,712,1995,726,1979,737,1941,754,1902,763">
+<area shape="poly" id="edge39"  alt="" coords="1900,774,1916,771,1921,768,1913,764,1916,759,1927,768,1919,776,1901,779">
+<area shape="rect" id="node18"  alt="" coords="1689,659,1836,690">
+<area shape="poly" id="edge40"  alt="" coords="1832,755,1782,701,1786,697,1836,751">
+<area shape="poly" id="edge10"  alt="" coords="1764,659,1771,634,1788,517,1797,423,1802,424,1793,518,1776,635,1770,661">
+<area shape="poly" id="edge41"  alt="" coords="1836,680,1852,678,1857,675,1848,671,1851,666,1863,674,1854,682,1837,685">
+<area shape="rect" id="node24"  alt="" coords="1603,566,1701,597">
+<area shape="poly" id="edge47"  alt="" coords="1745,662,1678,607,1681,603,1748,658">
+<area shape="rect" id="node20"  alt="" coords="289,193,503,223">
+<area shape="poly" id="edge43"  alt="" coords="592,302,479,292,432,280,401,263,393,251,391,237,396,236,398,249,405,259,434,275,480,286,592,297">
+<area shape="rect" id="node21"  alt="" coords="551,193,803,223">
+<area shape="poly" id="edge44"  alt="" coords="685,287,678,236,684,236,690,286">
+<area shape="rect" id="node22"  alt="" coords="847,193,1081,223">
+<area shape="poly" id="edge45"  alt="" coords="787,292,878,281,916,271,941,259,950,248,956,235,961,237,955,251,944,263,918,276,879,286,787,298">
+<area shape="rect" id="node23"  alt="" coords="5,193,190,223">
+<area shape="poly" id="edge46"  alt="" coords="591,303,451,302,295,297,163,285,118,276,93,263,86,250,86,236,91,236,91,249,97,259,120,271,164,280,296,292,451,297,592,298">
+<area shape="rect" id="node29"  alt="" coords="417,99,621,130">
+<area shape="poly" id="edge11"  alt="" coords="413,191,488,136,491,140,416,195">
+<area shape="poly" id="edge12"  alt="" coords="653,196,553,138,555,134,655,191">
+<area shape="poly" id="edge13"  alt="" coords="904,196,725,157,606,134,607,129,726,152,905,191">
+<area shape="poly" id="edge14"  alt="" coords="157,191,333,152,440,130,441,135,334,157,158,196">
+<area shape="poly" id="edge16"  alt="" coords="1652,596,1646,639,1646,699,1649,731,1657,763,1670,793,1688,819,1716,834,1761,845,1759,851,1714,839,1685,823,1665,796,1652,765,1644,732,1640,699,1641,639,1647,596">
+<area shape="rect" id="node25"  alt="" coords="1540,473,1764,503">
+<area shape="poly" id="edge48"  alt="" coords="1649,567,1649,517,1655,517,1655,567">
+<area shape="poly" id="edge49"  alt="" coords="1628,598,1592,621,1556,653,1542,670,1533,689,1531,708,1537,727,1556,754,1579,778,1606,797,1636,813,1699,836,1760,850,1759,855,1697,842,1633,818,1603,802,1575,782,1551,758,1532,729,1526,708,1528,687,1538,667,1552,649,1589,617,1625,594">
+<area shape="poly" id="edge15"  alt="" coords="1673,471,1766,414,1769,419,1675,476">
+<area shape="rect" id="node30"  alt="" coords="2301,846,2515,877">
+<area shape="poly" id="edge17"  alt="" coords="2405,940,2405,890,2411,890,2411,940">
+<area shape="rect" id="node27"  alt="" coords="2262,753,2543,783">
+<area shape="rect" id="node31"  alt="" coords="2281,659,2524,690">
+<area shape="poly" id="edge18"  alt="" coords="2400,753,2400,703,2405,703,2405,753">
+<area shape="rect" id="node28"  alt="" coords="2567,753,2801,783">
+<area shape="poly" id="edge53"  alt="" coords="2405,847,2402,797,2407,796,2410,846">
+<area shape="poly" id="edge54"  alt="" coords="2497,844,2544,833,2590,819,2651,788,2653,793,2592,824,2545,838,2498,849"></map>
+		</ul>
+
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading" data-toggle="collapse" data-target="#direct_associations_diagram">
+			<h4 class="panel-title">
+					Direct Associations Diagram <span class="glyphicon glyphicon-chevron-right"></span>
+			</h4>
+		</div>
+				<ul id="direct_associations_diagram" class="list-group panel-collapse collapse">
+			<img src="amiq_dcr_pkg-amiq_dcr_coverage_direct_associations.png" border="0" usemap="#_direct_associations_diagram" />
+			<map name="_direct_associations_diagram">
+<area shape="rect" id="node1" href="amiq_dcr_pkg-amiq_dcr_coverage.html"  alt="" coords="6,5,191,35">
+<area shape="rect" id="node2" href="amiq_dcr_pkg-amiq_dcr_agent_config.html"  alt="" coords="413,5,637,35">
+<area shape="poly" id="edge1"  alt="" coords="191,17,400,17,400,23,191,23"></map>
+		</ul>
+
+	</div>
+
+<!-- ========= Generated From ======= -->
+		<hr>Generated from: <a href="../sv/amiq_dcr_coverage.sv">amiq_dcr_coverage.sv</a>
+
+
+	</div>
+
+	<div class="footer">
+		<hr><p class="text-center">Generated by <b>cristian.slav</b> on Thu Feb 12 14:56:43 EET 2015 using <a href="http://www.dvteclipse.com/" target="_new">Specador<sup>TM</sup></a> Version 3.5.36.e4</p>
+    </div>
+
+	<script src="lib/jquery/js/jquery.js"></script>
+	<script src="lib/jquery/js/jquery.scrollUp.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<script src="js/content.js"></script>
+	<script src="js/custom.js"></script>
+
+	</body>
+</html>
+
+
