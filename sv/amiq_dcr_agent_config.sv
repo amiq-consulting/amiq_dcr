@@ -91,12 +91,6 @@
 			end
 		endfunction
 
-		//function for setting a new value for reset_active_level field
-		//@param reset_active_level - new value of the reset_active_level field
-		virtual function void set_reset_active_level(bit reset_active_level);
-			super.set_reset_active_level(reset_active_level);
-		endfunction
-
 		//function for setting a new value for has_checks field
 		//@param has_checks - new value of the has_checks field
 		virtual function void set_has_checks(bit has_checks);

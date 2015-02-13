@@ -33,7 +33,7 @@
 		//pointer to DUT virtual interface
 		local amiq_dcr_vif dut_vif;
 
-		`uvm_component_param_utils(amiq_dcr_slave_driver)
+		`uvm_component_utils(amiq_dcr_slave_driver)
 
 		//constructor
 		//@param name - name of the component instance

@@ -47,12 +47,6 @@
 				`uvm_fatal(get_id(), "Could not cast agent configuration to amiq_dcr_agent_config");
 		endfunction
 
-		//function for getting the ID used in messaging
-		//@return message ID
-		virtual function string get_id();
-			return "MON";
-		endfunction
-
 		//function for recording the change of "timeout wait"
 		//@param collected_transfer - pointer to the collected item
 		protected function void update_timeout_wait_changes(ref amiq_dcr_mon_transfer collected_transfer);
