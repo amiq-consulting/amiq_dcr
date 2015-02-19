@@ -25,7 +25,7 @@
 	`define AMIQ_DCR_COVERAGE_SV
 
 	// DCR coverage collector
-	class amiq_dcr_coverage extends uagt_coverage#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer));
+	class amiq_dcr_coverage extends cagt_coverage#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer));
 
 		//consecutive collected transfers
 		protected amiq_dcr_mon_transfer collected_transfers[$];

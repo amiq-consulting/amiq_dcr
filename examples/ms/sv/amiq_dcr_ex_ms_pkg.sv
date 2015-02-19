@@ -28,7 +28,7 @@
 
 	package amiq_dcr_ex_ms_pkg;
 		import uvm_pkg::*;
-		import uagt_pkg::*;
+		import cagt_pkg::*;
 		import amiq_dcr_pkg::*;
 
 		`include "amiq_dcr_ex_ms_defines.sv"

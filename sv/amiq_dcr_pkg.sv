@@ -24,13 +24,13 @@
 	//protection against multiple includes
 	`define AMIQ_DCR_PKG_SV
 
-	`include "uagt_pkg.sv"
+	`include "cagt_pkg.sv"
 	`include "amiq_dcr_if.sv"
 
 	package amiq_dcr_pkg;
 
 		import uvm_pkg::*;
-		import uagt_pkg::*;
+		import cagt_pkg::*;
 
 		`include "uvm_macros.svh"
 

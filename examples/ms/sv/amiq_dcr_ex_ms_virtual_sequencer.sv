@@ -28,10 +28,10 @@
 	class amiq_dcr_ex_ms_virtual_sequencer extends uvm_virtual_sequencer;
 
 		//pointer to the master sequencer
-		uagt_sequencer #(.REQ(amiq_dcr_master_drv_transfer)) master_sequencer;
+		cagt_sequencer #(.REQ(amiq_dcr_master_drv_transfer)) master_sequencer;
 
 		//pointer to the slave sequencer
-		uagt_sequencer #(.REQ(amiq_dcr_slave_drv_transfer)) slave_sequencer;
+		cagt_sequencer #(.REQ(amiq_dcr_slave_drv_transfer)) slave_sequencer;
 
 		//pointer to environment configuration unit
 		amiq_dcr_ex_ms_env_config env_config;

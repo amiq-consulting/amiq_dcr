@@ -25,7 +25,7 @@
 	`define AMIQ_DCR_SLAVE_DRIVER_SV
 
 	// DCR slave Driver
-	class amiq_dcr_slave_driver extends uagt_driver #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .REQ(amiq_dcr_slave_drv_transfer));
+	class amiq_dcr_slave_driver extends cagt_driver #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .REQ(amiq_dcr_slave_drv_transfer));
 
 		//casted agent configuration
 		amiq_dcr_slave_agent_config slave_agent_config;

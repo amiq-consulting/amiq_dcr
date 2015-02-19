@@ -25,7 +25,7 @@
 	`define AMIQ_DCR_MASTER_DRIVER_SV
 
 	// DCR master Driver
-	class amiq_dcr_master_driver extends uagt_driver #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .REQ(amiq_dcr_master_drv_transfer));
+	class amiq_dcr_master_driver extends cagt_driver #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .REQ(amiq_dcr_master_drv_transfer));
 
 		//casted agent configuration
 		amiq_dcr_master_agent_config master_agent_config;

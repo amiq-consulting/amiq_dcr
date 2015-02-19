@@ -29,7 +29,7 @@
 
 		`uvm_object_param_utils(amiq_dcr_slave_base_seq)
 
-		`uvm_declare_p_sequencer(uagt_sequencer #(.REQ(amiq_dcr_slave_drv_transfer)))
+		`uvm_declare_p_sequencer(cagt_sequencer #(.REQ(amiq_dcr_slave_drv_transfer)))
 
 		//constructor
 		//@param name - name of the component instance

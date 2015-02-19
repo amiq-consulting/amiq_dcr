@@ -10,17 +10,17 @@ API Specification</title>
     <show-external-doc-refs-in-navbar>true</show-external-doc-refs-in-navbar>
     <use-new-html-style>true</use-new-html-style>
     <created-by-user-watermark>true</created-by-user-watermark>
-    <clean-location>false</clean-location>
+    <clean-location>true</clean-location>
     <just-project-files>false</just-project-files>
-    <public-only>true</public-only>
+    <public-only>false</public-only>
     <filter-string/>
     <project-nature>vlog</project-nature>
     <export-vlog-package>amiq_dcr_pkg</export-vlog-package>
     <export-vlog-packages>true</export-vlog-packages>
     <export-vlog-global-scope>true</export-vlog-global-scope>
-    <export-vlog-modules>true</export-vlog-modules>
+    <export-vlog-modules>false</export-vlog-modules>
     <export-vlog-interfaces>true</export-vlog-interfaces>
-    <export-vlog-programs>true</export-vlog-programs>
+    <export-vlog-programs>false</export-vlog-programs>
     <export-vlog-macros>true</export-vlog-macros>
     <export-vlog-assertions>true</export-vlog-assertions>
     <export-vlog-covergroups>true</export-vlog-covergroups>

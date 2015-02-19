@@ -25,7 +25,7 @@
 	`define AMIQ_DCR_AGENT_SV
 
 	//DCR agent
-	class amiq_dcr_agent #(type DRIVER_ITEM_REQ=uvm_sequence_item) extends uagt_agent #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer), .DRIVER_ITEM_REQ(DRIVER_ITEM_REQ));
+	class amiq_dcr_agent #(type DRIVER_ITEM_REQ=uvm_sequence_item) extends cagt_agent #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer), .DRIVER_ITEM_REQ(DRIVER_ITEM_REQ));
 
 		`uvm_component_param_utils(amiq_dcr_agent#(DRIVER_ITEM_REQ))
 
@@ -35,8 +35,8 @@
 		function new(string name, uvm_component parent);
 			super.new(name, parent);
 
-			uagt_monitor#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer))::type_id::set_inst_override(amiq_dcr_monitor::get_type(), "monitor", this);
-			uagt_coverage#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer))::type_id::set_inst_override(amiq_dcr_coverage::get_type(), "coverage", this);
+			cagt_monitor#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer))::type_id::set_inst_override(amiq_dcr_monitor::get_type(), "monitor", this);
+			cagt_coverage#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer))::type_id::set_inst_override(amiq_dcr_coverage::get_type(), "coverage", this);
 		endfunction
 
 	endclass

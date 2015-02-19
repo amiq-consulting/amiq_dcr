@@ -35,8 +35,8 @@
 		function new(input string name, input uvm_component parent);
 			super.new(name, parent);
 
-			uagt_agent_config #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif))::type_id::set_inst_override(amiq_dcr_master_agent_config::get_type(), "agent_config", this);
-			uagt_driver #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .REQ(amiq_dcr_master_drv_transfer))::type_id::set_inst_override(amiq_dcr_master_driver::get_type(), "driver", this);
+			cagt_agent_config #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif))::type_id::set_inst_override(amiq_dcr_master_agent_config::get_type(), "agent_config", this);
+			cagt_driver #(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .REQ(amiq_dcr_master_drv_transfer))::type_id::set_inst_override(amiq_dcr_master_driver::get_type(), "driver", this);
 		endfunction
 
 	endclass

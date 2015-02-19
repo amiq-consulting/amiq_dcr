@@ -25,7 +25,7 @@
 	`define AMIQ_DCR_MONITOR_SV
 
 	// DCR monitor
-	class amiq_dcr_monitor extends uagt_monitor#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer));
+	class amiq_dcr_monitor extends cagt_monitor#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer));
 
 		//casted agent configuration
 		amiq_dcr_agent_config casted_agent_config;

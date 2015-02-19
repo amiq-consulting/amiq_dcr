@@ -25,7 +25,7 @@
 	`define AMIQ_DCR_AGENT_CONFIG_SV
 
 	// DCR agent config (enable/disable checkers and coverage switches)
-	class amiq_dcr_agent_config extends uagt_agent_config #(amiq_dcr_vif);
+	class amiq_dcr_agent_config extends cagt_agent_config #(amiq_dcr_vif);
 
 		// Enable DCR privileged optional signal
 		protected bit has_privileged = 1;
