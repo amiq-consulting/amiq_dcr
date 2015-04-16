@@ -15,8 +15,6 @@
  *
  * NAME:        amiq_dcr_ex_ms_top.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the declaration of the top module used by
  *              master-slave example.
  *******************************************************************************/

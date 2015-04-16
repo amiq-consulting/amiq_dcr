@@ -15,8 +15,6 @@
  *
  * MODULE:      amiq_dcr_coverage.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the declaration of the coverage.
  *******************************************************************************/
 
@@ -24,8 +22,16 @@
 	//protection against multiple includes
 	`define AMIQ_DCR_COVERAGE_SV
 
+	`uvm_analysis_imp_decl(_item_from_mon)
+
 	// DCR coverage collector
-	class amiq_dcr_coverage extends cagt_coverage#(.VIRTUAL_INTF_TYPE(amiq_dcr_vif), .MONITOR_ITEM(amiq_dcr_mon_transfer));
+	class amiq_dcr_coverage extends uvm_component;
+
+		//pointer to the agent configuration class
+		amiq_dcr_agent_config agent_config;
+
+		//port for receiving items collected by the monitor
+		uvm_analysis_imp_item_from_mon#(amiq_dcr_mon_transfer,amiq_dcr_coverage) item_from_mon_port;
 
 		//consecutive collected transfers
 		protected amiq_dcr_mon_transfer collected_transfers[$];
@@ -149,6 +155,8 @@
 		//@param parent - parent of the component instance
 		function new(string name="", uvm_component parent);
 			super.new(name, parent);
+			
+			item_from_mon_port = new("item_from_mon_port", this);
 
 			cover_transfer = new();
 			cover_transfer.set_inst_name($sformatf("%s_%s", get_full_name(), "cover_transfer"));
@@ -158,6 +166,12 @@
 
 			cover_reset = new();
 			cover_reset.set_inst_name($sformatf("%s_%s", get_full_name(), "cover_reset"));
+		endfunction
+
+		//function for getting the ID used in messaging
+		//@return message ID
+		virtual function string get_id();
+			return "COV";
 		endfunction
 
 		//UVM start of simulation phase
@@ -171,8 +185,6 @@
 		//implementation of the port receiving item from the monitor
 		//@param item - received item from the monitor
 		virtual function void write_item_from_mon(input amiq_dcr_mon_transfer transfer);
-			super.write_item_from_mon(transfer);
-
 			if(transfer.end_time != 0) begin
 				cover_transfer.sample(transfer);
 
@@ -205,8 +217,6 @@
 
 		//function for handling reset
 		virtual function void handle_reset();
-			super.handle_reset();
-
 			cover_reset.sample();
 			while(collected_transfers.size() > 0) begin
 				void'(collected_transfers.pop_front());

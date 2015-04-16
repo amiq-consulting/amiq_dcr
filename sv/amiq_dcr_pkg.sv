@@ -15,8 +15,6 @@
  *
  * MODULE:      amiq_dcr_pkg.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains all the imports part of amiq_dcr_pkg package.
  *******************************************************************************/
 
@@ -24,13 +22,11 @@
 	//protection against multiple includes
 	`define AMIQ_DCR_PKG_SV
 
-	`include "cagt_pkg.sv"
 	`include "amiq_dcr_if.sv"
 
 	package amiq_dcr_pkg;
 
 		import uvm_pkg::*;
-		import cagt_pkg::*;
 
 		`include "uvm_macros.svh"
 
@@ -43,6 +39,8 @@
 		`include "amiq_dcr_mon_transfer.sv"
 		`include "amiq_dcr_monitor.sv"
 		`include "amiq_dcr_coverage.sv"
+		`include "amiq_dcr_driver.sv"
+		`include "amiq_dcr_sequencer.sv"
 		`include "amiq_dcr_agent.sv"
 
 		`include "amiq_dcr_master_drv_transfer.sv"

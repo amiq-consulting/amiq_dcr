@@ -15,8 +15,6 @@
  *
  * MODULE:      amiq_dcr_transfer.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the declaration of the DCR transfer
  *******************************************************************************/
 

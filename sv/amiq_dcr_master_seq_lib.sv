@@ -15,8 +15,6 @@
  *
  * MODULE:      amiq_dcr_master_seq_lib.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the definition of the master sequence library.
  *******************************************************************************/
 
@@ -29,7 +27,7 @@
 
 		`uvm_object_param_utils(amiq_dcr_master_base_seq)
 
-		`uvm_declare_p_sequencer(cagt_sequencer #(.REQ(amiq_dcr_master_drv_transfer)))
+		`uvm_declare_p_sequencer(amiq_dcr_sequencer #(.REQ(amiq_dcr_master_drv_transfer)))
 
 		//constructor
 		//@param name - name of the component instance

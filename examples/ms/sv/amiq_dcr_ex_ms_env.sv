@@ -15,8 +15,6 @@
  *
  * NAME:        amiq_dcr_ex_ms_env.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the declaration of the environment used by
  *              "master-slave" example.
  *******************************************************************************/
@@ -84,7 +82,7 @@
 					agent_config.set_max_timeout_delay(master_max_timeout_delay);
 					agent_config.set_drain_time_at_timeout(period_ratio);
 
-					uvm_config_db#(cagt_agent_config #(amiq_dcr_vif))::set(this, "master_agent", "agent_config", agent_config);
+					uvm_config_db#(amiq_dcr_agent_config)::set(this, "master_agent", "agent_config", agent_config);
 				end
 
 				begin
@@ -92,7 +90,7 @@
 					agent_config.set_dut_vif(env_config.slave_dut_if);
 					agent_config.set_max_timeout_delay(slave_max_timeout_delay);
 
-					uvm_config_db#(cagt_agent_config #(amiq_dcr_vif))::set(this, "slave_agent", "agent_config", agent_config);
+					uvm_config_db#(amiq_dcr_agent_config)::set(this, "slave_agent", "agent_config", agent_config);
 				end
 
 				sequencer = amiq_dcr_ex_ms_virtual_sequencer::type_id::create("sequencer", this);

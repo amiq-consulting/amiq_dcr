@@ -15,8 +15,6 @@
  *
  * NAME:        amiq_dcr_ex_ms_pkg.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the includes of all files part of amiq_dcr_ex_ms_pkg package.
  *******************************************************************************/
 
@@ -28,7 +26,6 @@
 
 	package amiq_dcr_ex_ms_pkg;
 		import uvm_pkg::*;
-		import cagt_pkg::*;
 		import amiq_dcr_pkg::*;
 
 		`include "amiq_dcr_ex_ms_defines.sv"

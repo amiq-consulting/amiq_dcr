@@ -15,8 +15,6 @@
  *
  * MODULE:      amiq_dcr_agent_config.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the declaration of the agent configuration class.
  *******************************************************************************/
 
@@ -25,7 +23,22 @@
 	`define AMIQ_DCR_AGENT_CONFIG_SV
 
 	// DCR agent config (enable/disable checkers and coverage switches)
-	class amiq_dcr_agent_config extends cagt_agent_config #(amiq_dcr_vif);
+	class amiq_dcr_agent_config extends uvm_component;
+
+		//switch to determine the active or the passive aspect of the agent
+		protected uvm_active_passive_enum is_active = UVM_ACTIVE;
+
+		//switch to determine if to enable or not the coverage
+		protected bit has_coverage = 1;
+
+		//switch to determine if to enable or not the checks
+		protected bit has_checks = 1;
+
+		//active level of reset signal
+		protected bit reset_active_level = 0;
+
+		//pointer to the DUT interface
+		protected amiq_dcr_vif dut_vif;
 
 		// Enable DCR privileged optional signal
 		protected bit has_privileged = 1;
@@ -38,6 +51,70 @@
 
 		// Maximum delay (clock cycles) until a timeout occurs
 		protected int unsigned max_timeout_delay = 1_000;
+
+		//function for getting the value of is_active field
+		//@return is_active field value
+		virtual function uvm_active_passive_enum get_is_active();
+			return is_active;
+		endfunction
+
+		//function for setting a new value for is_active field
+		//@param is_active - new value of the is_active field
+		virtual function void set_is_active(uvm_active_passive_enum is_active);
+			this.is_active = is_active;
+		endfunction
+
+		//function for getting the value of has_coverage field
+		//@return has_coverage field value
+		virtual function bit get_has_coverage();
+			return has_coverage;
+		endfunction
+
+		//function for setting a new value for has_coverage field
+		//@param has_coverage - new value of the has_coverage field
+		virtual function void set_has_coverage(bit has_coverage);
+			this.has_coverage = has_coverage;
+		endfunction
+
+		//function for getting the value of has_checks field
+		//@return has_checks field value
+		virtual function bit get_has_checks();
+			return has_checks;
+		endfunction
+
+		//function for setting a new value for has_checks field
+		//@param has_checks - new value of the has_checks field
+		virtual function void set_has_checks(bit has_checks);
+			this.has_checks = has_checks;
+
+			if(dut_vif != null) begin
+				dut_vif.has_checks = has_checks;
+			end
+		endfunction
+
+		//function for getting the value of dut_vif field
+		//@return dut_vif field value
+		virtual function amiq_dcr_vif get_dut_vif();
+			return dut_vif;
+		endfunction
+
+		//function for setting a new value for dut_vif field
+		//@param dut_vif - new value of the dut_vif field
+		virtual function void set_dut_vif(amiq_dcr_vif dut_vif);
+			this.dut_vif = dut_vif;
+		endfunction
+
+		//function for getting the value of reset_active_level field
+		//@return reset_active_level field value
+		virtual function bit get_reset_active_level();
+			return reset_active_level;
+		endfunction
+
+		//function for setting a new value for reset_active_level field
+		//@param reset_active_level - new value of the reset_active_level field
+		virtual function void set_reset_active_level(bit reset_active_level);
+			this.reset_active_level = reset_active_level;
+		endfunction
 
 		//function for getting the value of has_privileged field
 		//@return has_privileged field value
@@ -91,16 +168,6 @@
 			end
 		endfunction
 
-		//function for setting a new value for has_checks field
-		//@param has_checks - new value of the has_checks field
-		virtual function void set_has_checks(bit has_checks);
-			super.set_has_checks(has_checks);
-
-			if(dut_vif != null) begin
-				dut_vif.has_checks = has_checks;
-			end
-		endfunction
-
 		//function to get the address mask based on its width
 		//@return address mask
 		function amiq_dcr_address get_address_mask();
@@ -110,6 +177,12 @@
 		endfunction
 
 		`uvm_component_utils(amiq_dcr_agent_config)
+
+		//function for getting the ID used in messaging
+		//@return message ID
+		virtual function string get_id();
+			return "AGT_CFG";
+		endfunction
 
 		//constructor
 		//@param name - name of the component instance
@@ -123,6 +196,9 @@
 		//@param phase - current phase
 		virtual function void start_of_simulation_phase(input uvm_phase phase);
 			super.start_of_simulation_phase(phase);
+			
+			AMIQ_DCR_DUT_IF_NULL : assert (dut_vif != null) else
+				`uvm_fatal(get_id(), "The pointer to the DUT interface is null - please make sure you set it via set_dut_vif() function before \"Start of Simulation\" phase!");
 
 			AMIQ_DCR_ILLEGAL_ADDR_WIDTH_DEFINES : assert ((`AMIQ_DCR_MIN_ADDR_WIDTH <= `AMIQ_DCR_MAX_ADDR_WIDTH)) else
 				`uvm_fatal(get_id(), $sformatf("Illegal defines: AMIQ_DCR_MIN_ADDR_WIDTH: %d should be less or equal to AMIQ_DCR_MAX_ADDR_WIDTH: %0d",

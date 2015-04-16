@@ -15,8 +15,6 @@
  *
  * NAME:        amiq_dcr_master_agent_config.sv
  * PROJECT:     amiq_dcr
- * Engineer(s): Cristian Florin Slav (cristian.slav@amiq.com)
- *
  * Description: This file contains the declaration of the master agent
  *              configuration class.
  *******************************************************************************/

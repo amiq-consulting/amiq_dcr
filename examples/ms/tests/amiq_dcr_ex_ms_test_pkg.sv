@@ -15,8 +15,6 @@
  *
  * NAME:        amiq_dcr_ex_ms_test_pkg.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains all imports of the amiq_dcr_ex_ms_test_pkg package
  *******************************************************************************/
 

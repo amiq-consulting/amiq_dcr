@@ -15,8 +15,6 @@
  *
  * NAME:        amiq_dcr_ex_ms_slave_driver.sv
  * PROJECT:     amiq_dcr
- * Engineers:   Daniel Ciupitu (daniel.ciupitu@amiq.com)
- *              Cristian Florin Slav (cristian.slav@amiq.com)
  * Description: This file contains the declaration of the slave driver which should
  *              drive on read transfers data from the register model.
  *******************************************************************************/
