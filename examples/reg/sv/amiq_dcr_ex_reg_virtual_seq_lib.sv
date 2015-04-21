@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * NAME:        amiq_dcr_ex_ms_virtual_seq_lib.sv
+ * NAME:        amiq_dcr_ex_reg_virtual_seq_lib.sv
  * PROJECT:     amiq_dcr
  * Description: This file contains the declaration of the virtual sequence library.
  *******************************************************************************/
 
-`ifndef AMIQ_DCR_EX_MS_VIRTUAL_SEQ_LIB_SV
+`ifndef AMIQ_DCR_EX_REG_VIRTUAL_SEQ_LIB_SV
 	//protection against multiple includes
-	`define AMIQ_DCR_EX_MS_VIRTUAL_SEQ_LIB_SV
+	`define AMIQ_DCR_EX_REG_VIRTUAL_SEQ_LIB_SV
 
 
 	//base virtual sequence
-	class amiq_dcr_ex_ms_virtual_sequence_base extends uvm_sequence;
+	class amiq_dcr_ex_reg_virtual_sequence_base extends uvm_sequence;
 
-		`uvm_object_utils(amiq_dcr_ex_ms_virtual_sequence_base)
+		`uvm_object_utils(amiq_dcr_ex_reg_virtual_sequence_base)
 
-		`uvm_declare_p_sequencer(amiq_dcr_ex_ms_virtual_sequencer)
+		`uvm_declare_p_sequencer(amiq_dcr_ex_reg_virtual_sequencer)
 
 		//function for getting the ID used in messaging
 		//@return message ID
@@ -81,7 +81,7 @@
 	endclass
 
 	//random sequence
-	class amiq_dcr_ex_ms_virtual_sequence_master_random extends amiq_dcr_ex_ms_virtual_sequence_base;
+	class amiq_dcr_ex_reg_virtual_sequence_master_random extends amiq_dcr_ex_reg_virtual_sequence_base;
 
 		//number of DCR items to send
 		rand int unsigned number_of_items;
@@ -93,7 +93,7 @@
 			soft number_of_items inside {[200:300]};
 		}
 
-		`uvm_object_utils(amiq_dcr_ex_ms_virtual_sequence_master_random)
+		`uvm_object_utils(amiq_dcr_ex_reg_virtual_sequence_master_random)
 
 		//constructor
 		//@param name - name of the object instance
@@ -106,7 +106,9 @@
 			for(current_item = 0; current_item < number_of_items; current_item++) begin
 				amiq_dcr_master_simple_seq master_sequence = amiq_dcr_master_simple_seq::type_id::create("master_sequence");
 
-				assert (master_sequence.randomize()) else
+				assert (master_sequence.randomize() with {
+					master_sequence.seq_item.address < `AMIQ_DCR_EX_REG_NUMBER_OF_REGS;
+					}) else
 					`uvm_fatal("random sequence", "Could not randomize item amiq_dcr_master_simple_seq");
 				master_sequence.start(p_sequencer.master_sequencer);
 			end
@@ -114,9 +116,9 @@
 	endclass
 
 	//random sequence
-	class amiq_dcr_ex_ms_virtual_sequence_slave_random extends amiq_dcr_ex_ms_virtual_sequence_base;
+	class amiq_dcr_ex_reg_virtual_sequence_slave_random extends amiq_dcr_ex_reg_virtual_sequence_base;
 
-		`uvm_object_utils(amiq_dcr_ex_ms_virtual_sequence_slave_random)
+		`uvm_object_utils(amiq_dcr_ex_reg_virtual_sequence_slave_random)
 
 		//constructor
 		//@param name - name of the object instance

@@ -13,14 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * NAME:        amiq_dcr_ex_ms_defines.sv
+ * NAME:        amiq_dcr_ex_reg_defines.sv
  * PROJECT:     amiq_dcr
  * Description: This file contains the declaration of all the used defines
  *******************************************************************************/
 
-`ifndef AMIQ_DCR_EX_MS_DEFINES_SV
+`ifndef AMIQ_DCR_EX_REG_DEFINES_SV
 	//protection against multiple includes
-	`define AMIQ_DCR_EX_MS_DEFINES_SV
+	`define AMIQ_DCR_EX_REG_DEFINES_SV
+
+	//number of registers
+	`define AMIQ_DCR_EX_REG_NUMBER_OF_REGS 32
 
 `endif
 

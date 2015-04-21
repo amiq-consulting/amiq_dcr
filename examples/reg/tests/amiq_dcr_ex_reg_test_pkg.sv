@@ -1,5 +1,5 @@
 /******************************************************************************
- * (C) Copyright 2015 AMIQ Consulting
+ * (C) Copyright 2014 AMIQ Consulting
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,14 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * NAME:        amiq_dcr_ex_ms_defines.sv
+ * NAME:        amiq_dcr_ex_reg_test_pkg.sv
  * PROJECT:     amiq_dcr
- * Description: This file contains the declaration of all the used defines
+ * Description: This file contains all imports of the amiq_dcr_ex_reg_test_pkg package
  *******************************************************************************/
 
-`ifndef AMIQ_DCR_EX_MS_DEFINES_SV
+`ifndef AMIQ_DCR_EX_REG_TEST_PKG_SV
 	//protection against multiple includes
-	`define AMIQ_DCR_EX_MS_DEFINES_SV
+	`define AMIQ_DCR_EX_REG_TEST_PKG_SV
+
+	`include "amiq_dcr_ex_reg_pkg.sv"
+
+	package amiq_dcr_ex_reg_test_pkg;
+		import uvm_pkg::*;
+		import amiq_dcr_pkg::*;
+		import amiq_dcr_ex_reg_pkg::*;
+
+		`include "amiq_dcr_ex_reg_test_basic.sv"
+		`include "amiq_dcr_ex_reg_test_random.sv"
+
+	endpackage
 
 `endif
 

@@ -32,11 +32,6 @@
 		`include "amiq_dcr_ex_ms_env_config.sv"
 		`include "amiq_dcr_ex_ms_virtual_sequencer.sv"
 		`include "amiq_dcr_ex_ms_scoreboard.sv"
-		`include "amiq_dcr_ex_ms_reg_file.sv"
-		`include "amiq_dcr_ex_ms_reg_block.sv"
-		`include "amiq_dcr_ex_ms_reg2dcr_adapter.sv"
-		`include "amiq_dcr_ex_ms_dcr2reg_predictor.sv"
-		`include "amiq_dcr_ex_ms_slave_driver.sv"
 		`include "amiq_dcr_ex_ms_env.sv"
 		`include "amiq_dcr_ex_ms_virtual_seq_lib.sv"
 

@@ -13,14 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * NAME:        amiq_dcr_ex_ms_defines.sv
+ * NAME:        amiq_dcr_ex_reg_pkg.sv
  * PROJECT:     amiq_dcr
- * Description: This file contains the declaration of all the used defines
+ * Description: This file contains the includes of all files part of amiq_dcr_ex_reg_pkg package.
  *******************************************************************************/
 
-`ifndef AMIQ_DCR_EX_MS_DEFINES_SV
+`ifndef AMIQ_DCR_EX_REG_PKG_SV
 	//protection against multiple includes
-	`define AMIQ_DCR_EX_MS_DEFINES_SV
+	`define AMIQ_DCR_EX_REG_PKG_SV
 
+	`include "amiq_dcr_pkg.sv"
+
+	package amiq_dcr_ex_reg_pkg;
+		import uvm_pkg::*;
+		import amiq_dcr_pkg::*;
+
+		`include "amiq_dcr_ex_reg_defines.sv"
+		`include "amiq_dcr_ex_reg_env_config.sv"
+		`include "amiq_dcr_ex_reg_virtual_sequencer.sv"
+		`include "amiq_dcr_ex_reg_reg_file.sv"
+		`include "amiq_dcr_ex_reg_reg_block.sv"
+		`include "amiq_dcr_ex_reg_reg2dcr_adapter.sv"
+		`include "amiq_dcr_ex_reg_dcr2reg_predictor.sv"
+		`include "amiq_dcr_ex_reg_slave_driver.sv"
+		`include "amiq_dcr_ex_reg_env.sv"
+		`include "amiq_dcr_ex_reg_virtual_seq_lib.sv"
+
+	endpackage
 `endif
 

@@ -5,3 +5,6 @@
 +incdir+examples/ms/sv
 +incdir+examples/ms/tests
 examples/ms/sv/amiq_dcr_ex_ms_top.sv
+examples/reg/sv/amiq_dcr_ex_reg_top.sv
++incdir+examples/reg/sv
++incdir+examples/reg/tests
