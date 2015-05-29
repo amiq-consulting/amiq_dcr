@@ -3,7 +3,7 @@
     <location>docs/html</location>
     <title>amiq_dcr
 API Specification</title>
-    <overview-file>/home/cristian.slav/work/amiq/projects/clients/amiq/amiq_dcr/README</overview-file>
+    <overview-file>README</overview-file>
     <enhance-comments>true</enhance-comments>
     <doc-formatting-type>auto</doc-formatting-type>
     <user-defined-html/>
